@@ -62,7 +62,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_superuser = models.BooleanField(default=False)
     date_joined = models.DateTimeField(default=timezone.now)
     Register_as=models.CharField(max_length=200,blank=True,null=True)
-    phone_number=models.CharField(max_length=300,blank=True,null=True)
+    phone_number=models.CharField(max_length=20,blank=True,null=True)
 
     
 
@@ -77,7 +77,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 class ContactUs(models.Model):
      full_name=models.CharField(max_length=250)
      email=models.EmailField(max_length=250)
-     phone_number=models.IntegerField()
+     phone_number=models.CharField(max_length=20)
      your_message=models.TextField()
 
      def __str__(self):
