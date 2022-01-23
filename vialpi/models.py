@@ -77,7 +77,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 class ContactUs(models.Model):
      full_name=models.CharField(max_length=250)
      email=models.EmailField(max_length=250)
-     phone_number=models.CharField(max_length=20)
+     phone_number=models.CharField(max_length=200)
      your_message=models.TextField()
 
      def __str__(self):
