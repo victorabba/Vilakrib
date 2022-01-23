@@ -1,4 +1,4 @@
-from tkinter import N
+
 from urllib import request
 import jwt
 from.models import Jwt
